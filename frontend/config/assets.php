@@ -11,7 +11,9 @@ Yii::setAlias('assets', '@frontend/assets');
 use backend\assets\AppAsset;
 use frontend\assets\ThreeAsset;
 use frontend\assets\TwoAsset;
+use yii\validators\ValidationAsset;
 use yii\web\AssetBundle;
+use yii\widgets\ActiveFormAsset;
 
 return [
     // Adjust command/callback for JavaScript files compressing:
@@ -41,6 +43,8 @@ return [
             'css'      => 'css/two-{hash}.css',
             'depends'  => [
                 TwoAsset::class,
+                ActiveFormAsset::class,
+                ValidationAsset::class,
             ],
         ],
         'three' => [
@@ -51,6 +55,8 @@ return [
             'css'      => 'css/three-{hash}.css',
             'depends'  => [
                 ThreeAsset::class,
+                ActiveFormAsset::class,
+                ValidationAsset::class,
             ],
         ],
     ],
