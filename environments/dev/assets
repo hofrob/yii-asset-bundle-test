@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -rf frontend/web/assets/*
+rm -rf backend/web/assets/*
+mkdir frontend/web/assets/css
+mkdir frontend/web/assets/js
+./yii asset frontend/config/assets.php frontend/config/assets-prod.php
